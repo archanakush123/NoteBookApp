@@ -11,4 +11,38 @@
         android:layout_height="match_parent"
         android:text="NoteDetailsFragment" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/note_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title...."
+                android:maxLines="2"
+                android:text="xgasfhdgasvhxj"
+                android:ellipsize="end"
+                android:textSize="30sp"
+                android:textColor="#6E177E"
+                android:layout_marginTop="20dp"
+                />
+            <TextView
+                android:id="@+id/note_description"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/note_title"
+                android:hint="Descrption"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
 </FrameLayout>

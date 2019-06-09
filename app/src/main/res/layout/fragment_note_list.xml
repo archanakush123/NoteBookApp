@@ -4,12 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ee4136"
-    tools:context=".NoteListFragment">
+    tools:context=".fragments.NoteListFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="NoteListFragment" />
+    android:text="NoteListFragment" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/note_list_recyler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </FrameLayout>
