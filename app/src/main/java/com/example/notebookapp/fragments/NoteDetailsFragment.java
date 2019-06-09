@@ -13,6 +13,10 @@ import androidx.fragment.app.Fragment;
 import com.example.notebookapp.R;
 import com.example.notebookapp.listeners.NoteActivityListener;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
 public class NoteDetailsFragment extends Fragment {
 
     private NoteActivityListener mListener;
