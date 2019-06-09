@@ -5,7 +5,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
+
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import com.example.notebookapp.R;
 import com.example.notebookapp.base.livedata.EventObject;
@@ -17,6 +19,8 @@ import com.example.notebookapp.viewmodel.NoteActivityViewModel;
 public class NoteActivity extends BaseActivity<ActivityNoteBinding, NoteActivityViewModel> implements NoteActivityListener {
 
     public static final String TAG = NoteActivity.class.getSimpleName();
+
+    private NavController mNavController;
 
     @Override
     public int getBindingVariable() {
@@ -37,6 +41,7 @@ public class NoteActivity extends BaseActivity<ActivityNoteBinding, NoteActivity
     private void initialization() {
         createViewModel(new NoteActivityViewModel(getApplication()), NoteActivityViewModel.class);
         subscribeViewModel();
+        mNavController = Navigation.findNavController(this,R.id.nav_host_fragment);
     }
 
     private void subscribeViewModel() {
@@ -61,19 +66,16 @@ public class NoteActivity extends BaseActivity<ActivityNoteBinding, NoteActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menu_add:
-                Toast.makeText(this, "Added....", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.menu_edit:
-                Toast.makeText(this, "Edited....", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.menu_save:
-                Toast.makeText(this, "Saved....", Toast.LENGTH_SHORT).show();
-                break;
-            default:
-                break;
+        if (item.getItemId() == R.id.menu_add) {
+            mNavController.navigate(R.id.addNoteFragment);
+        }else if (item.getItemId() == R.id.menu_edit) {
+            mNavController.navigate(R.id.editNoteFragment);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void launchNoteDetailFragment() {
+        mNavController.navigate(R.id.noteDetailsFragment);
     }
 }

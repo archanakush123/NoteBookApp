@@ -1,29 +1,29 @@
-package com.example.notebookapp.base;
+package com.example.notebookapp.base.ui;
 
+
+import androidx.multidex.MultiDexApplication;
 
 import com.example.notebookapp.base.manager.AppExecutors;
 
-import androidx.multidex.MultiDexApplication;
 
 /**
  * This class is base class for App Application class which added support for Multidex Application.
  */
-public class NoteApplication extends MultiDexApplication {
+public class BaseApplication extends MultiDexApplication {
 
-    public static final String TAG = NoteApplication.class.getName();
+    public static final String TAG = BaseApplication.class.getName();
 
-    private static NoteApplication mInstance;
+    private static BaseApplication mInstance;
     private AppExecutors mAppExecutors;
 
     //Constructor
-    protected NoteApplication() {
+    protected BaseApplication() {
         mInstance = this;
-
     }
 
-    public static NoteApplication getInstance() {
+    public static BaseApplication getInstance() {
         if (mInstance == null) {
-            mInstance = new NoteApplication();
+            mInstance = new BaseApplication();
         }
         return mInstance;
     }

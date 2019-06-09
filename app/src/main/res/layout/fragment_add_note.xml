@@ -1,47 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.AddNoteFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="AddNoteFragment" />
+        tools:context=".fragments.AddNoteFragment">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp">
-            <TextView
-                android:id="@+id/note_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Title...."
-                android:maxLines="2"
-                android:text="xgasfhdgasvhxj"
-                android:ellipsize="end"
-                android:textSize="30sp"
-                android:textColor="#6E177E"
-                android:layout_marginTop="20dp"
-                />
-            <TextView
-                android:id="@+id/note_description"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/note_title"
-                android:hint="Descrption"
-                android:layout_marginTop="20dp"
-                android:textSize="20sp"/>
-        </RelativeLayout>
+                android:padding="16dp">
 
-    </ScrollView>
+                <TextView
+                    android:id="@+id/note_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:ellipsize="end"
+                    android:hint="Title...."
+                    android:maxLines="2"
+                    android:textColor="#6E177E"
+                    android:textSize="30sp" />
 
-</FrameLayout>
+                <TextView
+                    android:id="@+id/note_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/note_title"
+                    android:layout_marginTop="20dp"
+                    android:hint="Descrption"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+</layout>
