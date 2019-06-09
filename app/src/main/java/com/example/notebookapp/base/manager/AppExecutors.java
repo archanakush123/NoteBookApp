@@ -19,6 +19,7 @@ public class AppExecutors {
 
     /**
      * Constructor for pass DiskIO executor service , Network executor service and Main thread executor service.
+     *
      * @param diskIO
      * @param networkIO
      * @param mainThread
@@ -37,6 +38,7 @@ public class AppExecutors {
 
     /**
      * This implementation returns Disk Executor Service to handle Database operation
+     *
      * @return
      */
     public Executor diskIO() {
@@ -45,6 +47,7 @@ public class AppExecutors {
 
     /**
      * This implementation returns Network Executor Service to handle Network operation
+     *
      * @return
      */
     public Executor networkIO() {
@@ -53,6 +56,7 @@ public class AppExecutors {
 
     /**
      * This implementation returns Main Executor Service to handle Main thread operation
+     *
      * @return
      */
     public Executor mainThread() {

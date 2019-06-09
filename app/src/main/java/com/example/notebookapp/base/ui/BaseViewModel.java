@@ -17,7 +17,7 @@ public class BaseViewModel extends AndroidViewModel {
     private LiveData<LiveDataEvent<EventObject>> mBroadcastEvent;
 
     // Constructor
-    public BaseViewModel(Application application){
+    public BaseViewModel(Application application) {
         super(application);
         // Subscribe broadcase event.
         mBroadcastEvent = DataRepository.getInstance().getBroadCastEvent();
@@ -25,9 +25,10 @@ public class BaseViewModel extends AndroidViewModel {
 
     /**
      * This implementation return Broadcast event Live data object for subscribing and observing.
+     *
      * @return
      */
-    public LiveData<LiveDataEvent<EventObject>> getLiveDataEvent(){
+    public LiveData<LiveDataEvent<EventObject>> getLiveDataEvent() {
         return mBroadcastEvent;
     }
 }

@@ -16,10 +16,11 @@ import androidx.lifecycle.ViewModelProviders;
 
 /**
  * This class is base class for Activities .
- * @param <T>  Data Binding class
- * @param <V>  View Model Class
+ *
+ * @param <T> Data Binding class
+ * @param <V> View Model Class
  */
-public abstract class BaseActivity <T extends ViewDataBinding, V extends BaseViewModel> extends AppCompatActivity {
+public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseViewModel> extends AppCompatActivity {
 
     public static final String TAG = BaseActivity.class.getSimpleName();
 
@@ -51,16 +52,18 @@ public abstract class BaseActivity <T extends ViewDataBinding, V extends BaseVie
 
     /**
      * This implementation create View Model for activity
+     *
      * @param viewModel
      * @param viewModelClass
      */
-    public void createViewModel(BaseViewModel viewModel, Class<V> viewModelClass){
+    public void createViewModel(BaseViewModel viewModel, Class<V> viewModelClass) {
         ViewModelProviderFactory factory = new ViewModelProviderFactory<>(viewModel);
         mViewModel = ViewModelProviders.of(this, factory).get(viewModelClass);
     }
 
     /**
      * This implementation return ViewModel class of V type
+     *
      * @return V --> ViewModel
      */
     public V getViewModel() {
@@ -69,6 +72,7 @@ public abstract class BaseActivity <T extends ViewDataBinding, V extends BaseVie
 
     /**
      * This implementation return View Data Binding class of T type
+     *
      * @return T --> DataBinding
      */
     public T getViewDataBinding() {

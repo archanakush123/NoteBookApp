@@ -61,7 +61,7 @@ public class NoteActivity extends BaseActivity<ActivityNoteBinding, NoteActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.menu_add:
                 Toast.makeText(this, "Added....", Toast.LENGTH_SHORT).show();
                 break;

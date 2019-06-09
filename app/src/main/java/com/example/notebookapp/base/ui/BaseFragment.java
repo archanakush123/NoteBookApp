@@ -20,10 +20,11 @@ import androidx.lifecycle.ViewModelProviders;
 
 /**
  * This class is base class for Fragment.s
- * @param <T>  Data Binding Type
+ *
+ * @param <T> Data Binding Type
  * @param <V> View Model Type
  */
-public abstract class BaseFragment <T extends ViewDataBinding, V extends BaseViewModel> extends Fragment {
+public abstract class BaseFragment<T extends ViewDataBinding, V extends BaseViewModel> extends Fragment {
 
 
     private BaseActivity mActivity;
@@ -68,10 +69,11 @@ public abstract class BaseFragment <T extends ViewDataBinding, V extends BaseVie
 
     /**
      * This implementation create ViewModel
+     *
      * @param viewModel
      * @param viewModelClass
      */
-    public void createViewModel(BaseViewModel viewModel, Class<V> viewModelClass){
+    public void createViewModel(BaseViewModel viewModel, Class<V> viewModelClass) {
         ViewModelProviderFactory factory = new ViewModelProviderFactory<>(viewModel);
         mViewModel = ViewModelProviders.of(this, factory).get(viewModelClass);
     }
@@ -92,6 +94,7 @@ public abstract class BaseFragment <T extends ViewDataBinding, V extends BaseVie
 
     /**
      * This implementation return base Activity for current Fragment.
+     *
      * @return
      */
     public BaseActivity getBaseActivity() {
@@ -101,6 +104,7 @@ public abstract class BaseFragment <T extends ViewDataBinding, V extends BaseVie
 
     /**
      * This implementation return  View Data Binding of T type
+     *
      * @return
      */
     public T getViewDataBinding() {
@@ -109,6 +113,7 @@ public abstract class BaseFragment <T extends ViewDataBinding, V extends BaseVie
 
     /**
      * This implementation return View Model for V type
+     *
      * @return
      */
     public V getViewModel() {
@@ -117,11 +122,12 @@ public abstract class BaseFragment <T extends ViewDataBinding, V extends BaseVie
 
     /**
      * This implementation handle collapsing layout mode.
+     *
      * @param collapseLayout
      * @param toolbar
      * @param titleView
      */
-    public void handleCollapsingLayout(AppBarLayout collapseLayout, Toolbar toolbar , View titleView){
+    public void handleCollapsingLayout(AppBarLayout collapseLayout, Toolbar toolbar, View titleView) {
         collapseLayout.addOnOffsetChangedListener((appBarLayout, verticalOffset) -> {
             verticalOffset = Math.abs(verticalOffset);
             if (appBarLayout != null) {

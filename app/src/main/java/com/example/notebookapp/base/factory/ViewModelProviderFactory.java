@@ -1,7 +1,6 @@
 package com.example.notebookapp.base.factory;
 
 
-
 import com.example.notebookapp.base.ui.BaseViewModel;
 
 import androidx.lifecycle.ViewModel;

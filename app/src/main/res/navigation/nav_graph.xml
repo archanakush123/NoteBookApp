@@ -9,13 +9,13 @@
         android:id="@+id/noteListFragment"
         android:name="com.example.notebookapp.fragments.NoteListFragment"
         android:label="fragment_note_list"
-        tools:layout="@layout/fragment_note_list"/>
+        tools:layout="@layout/fragment_note_list" />
 
     <fragment
         android:id="@+id/addNoteFragment"
         android:name="com.example.notebookapp.fragments.AddNoteFragment"
         android:label="fragment_add_note"
-        tools:layout="@layout/fragment_add_note"/>
+        tools:layout="@layout/fragment_add_note" />
 
     <fragment
         android:id="@+id/editNoteFragment"
@@ -26,6 +26,6 @@
         android:id="@+id/noteDetailsFragment"
         android:name="com.example.notebookapp.fragments.NoteDetailsFragment"
         android:label="fragment_note_details"
-        tools:layout="@layout/fragment_note_details"/>
+        tools:layout="@layout/fragment_note_details" />
 
 </navigation>

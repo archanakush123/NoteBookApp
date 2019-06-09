@@ -9,20 +9,20 @@ public class LiveDataEvent<T> {
     private T content;
 
 
-   public LiveDataEvent(T content){
-       this.content = content;
-   }
+    public LiveDataEvent(T content) {
+        this.content = content;
+    }
 
 
     /**
      * Returns the content and prevents its use again.
      */
     public T getContentIfNotHandled() {
-         if (hasBeenHandled) {
-           return null;
+        if (hasBeenHandled) {
+            return null;
         }
         hasBeenHandled = true;
-         return content;
+        return content;
     }
 
 
@@ -30,6 +30,6 @@ public class LiveDataEvent<T> {
      * Returns the content, even if it's already been handled.
      */
     public T peekContent() {
-       return content;
+        return content;
     }
 }

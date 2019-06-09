@@ -16,6 +16,7 @@ public class EventObject {
 
     /**
      * Get key for Event
+     *
      * @return
      */
     public int getKey() {
@@ -24,6 +25,7 @@ public class EventObject {
 
     /**
      * Get Value associated with Broadcast Event.
+     *
      * @return
      */
     public Object[] getValue() {
